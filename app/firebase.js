@@ -1,23 +1,19 @@
-// Import Firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
 
-// Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCVTcUsIUap1_TGNJON0wjJ4ARIjf0GQww",
-  authDomain: "employment-form-f5105.firebaseapp.com",
-  projectId: "employment-form-f5105",
-  storageBucket: "employment-form-f5105.firebasestorage.app",
-  messagingSenderId: "376461324487",
-  appId: "1:376461324487:web:fdfe9fa6c963ebd97f8ee2",
-  measurementId: "G-LQCY71X6TT"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "XXXXXX",
+  appId: "XXXXXX"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-//Initialize Firestore
-const db = getFirestore(app);
-
-// Export db
-export { db };
+// Services export karo
+export const db = getFirestore(app);
+export const auth = getAuth(app);
